@@ -1,0 +1,44 @@
+### Obtener todos los productos
+GET http://localhost:3000/products
+Accept: application/json
+
+###
+
+### Obtener un producto por ID
+GET http://localhost:3000/products/668850c286b22051fbe04bf9
+Accept: application/json
+
+###
+
+### Buscar productos por nombre
+GET http://localhost:3000/products/nombre/Teclado Mecánico
+Accept: application/json
+
+###
+
+### Agregar un nuevo producto
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "codigo": 31,
+  "nombre": "Nuevo Producto",
+  "precio": 150,
+  "categoria": "Categoría Nueva"
+}
+
+###
+
+### Modificar el precio de un producto
+PATCH http://localhost:3000/products/668850c286b22051fbe04bf9
+Content-Type: application/json
+
+{
+  "precio": 200
+}
+
+###
+
+### Borrar un producto
+DELETE http://localhost:3000/products/668850c286b22051fbe04bf9
+Accept: application/json
